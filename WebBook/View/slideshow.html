@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .cart-container {
+      text-align: center;
+    }
+    .empty-cart {
+      display: block;
+      width: 200px;
+      height: 200px;
+      background-image: url('./img/empty-cart.png');
+      background-size: cover;
+      margin: 0 auto;
+    }
+    .cart-form {
+      display: none;
+    }
+    
+    .show-form .cart-form {
+      display: block;
+    }
+    .class2{
+      display: none;
+    }
+  </style>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <button onclick="toggleClasses()">Click để chuyển đổi classes</button>
+
+  <div class="class1">
+    <img src="./img/empty-cart.png" alt="">
+  </div>
+  <div class="class2">
+    <div class="title-icon">Giỏ hàng</div>
+    <div class="cart-form">
+      <table>
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Hình</th>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Thêm các sản phẩm vào đây -->
+          <tr>
+            <td>1</td>
+            <td><img src="../img/anhsanpham/1001truyencotich.jpg" alt="" class="img-project"></td>
+            <td>100 Truyện Cổ Tích Việt Nam</td>
+            <td>$10.00</td>
+            <td><input type="number" name="quantity1" value="1"></td>
+          </tr>
+        </tbody>
+      </table>
+      <input type="submit" value="Thanh toán">
+    </div>
+  </div>
+
+  <script>
+    function toggleClasses() {
+      var class1Element = document.querySelector('.class1');
+      var class2Element = document.querySelector('.class2');
+      
+      if (class1Element.style.display === 'none') {
+        class1Element.style.display = 'block';
+        class2Element.style.display = 'none';
+      } else {
+        class1Element.style.display = 'none';
+        class2Element.style.display = 'block';
+      }
+    }
+    
+  </script>
+</body>
+</html>
